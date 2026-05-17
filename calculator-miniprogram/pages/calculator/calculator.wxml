@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- 显示屏 -->
+  <view class="display">
+    <text class="expression">{{expression}}</text>
+    <text class="result">{{display}}</text>
+  </view>
+
+  <!-- 按键区 -->
+  <view class="keypad">
+    <!-- 第一行 -->
+    <view class="key key-func" bindtap="onClear">AC</view>
+    <view class="key key-func" bindtap="onToggleSign">+/-</view>
+    <view class="key key-func" bindtap="onPercent">%</view>
+    <view class="key key-op" bindtap="onOperator" data-op="÷">÷</view>
+
+    <!-- 第二行 -->
+    <view class="key key-num" bindtap="onNumber" data-num="7">7</view>
+    <view class="key key-num" bindtap="onNumber" data-num="8">8</view>
+    <view class="key key-num" bindtap="onNumber" data-num="9">9</view>
+    <view class="key key-op" bindtap="onOperator" data-op="×">×</view>
+
+    <!-- 第三行 -->
+    <view class="key key-num" bindtap="onNumber" data-num="4">4</view>
+    <view class="key key-num" bindtap="onNumber" data-num="5">5</view>
+    <view class="key key-num" bindtap="onNumber" data-num="6">6</view>
+    <view class="key key-op" bindtap="onOperator" data-op="−">−</view>
+
+    <!-- 第四行 -->
+    <view class="key key-num" bindtap="onNumber" data-num="1">1</view>
+    <view class="key key-num" bindtap="onNumber" data-num="2">2</view>
+    <view class="key key-num" bindtap="onNumber" data-num="3">3</view>
+    <view class="key key-op" bindtap="onOperator" data-op="+">+</view>
+
+    <!-- 第五行 -->
+    <view class="key key-num key-zero" bindtap="onNumber" data-num="0">0</view>
+    <view class="key key-num" bindtap="onDot">.</view>
+    <view class="key key-op" bindtap="onEquals">=</view>
+  </view>
+</view>

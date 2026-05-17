@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #1a1a2e;
+  padding: 0 20rpx 40rpx;
+  box-sizing: border-box;
+}
+
+/* 显示屏 */
+.display {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20rpx 30rpx 40rpx;
+}
+
+.expression {
+  font-size: 36rpx;
+  color: rgba(255, 255, 255, 0.5);
+  min-height: 50rpx;
+  word-break: break-all;
+  text-align: right;
+}
+
+.result {
+  font-size: 100rpx;
+  color: #ffffff;
+  font-weight: 300;
+  margin-top: 10rpx;
+  word-break: break-all;
+  text-align: right;
+  line-height: 1.1;
+}
+
+/* 按键区 */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140rpx;
+  border-radius: 70rpx;
+  font-size: 52rpx;
+  font-weight: 400;
+  cursor: pointer;
+  transition: opacity 0.1s;
+}
+
+.key:active {
+  opacity: 0.6;
+}
+
+/* 数字键 */
+.key-num {
+  background-color: #333650;
+  color: #ffffff;
+}
+
+/* 功能键 AC +/- % */
+.key-func {
+  background-color: #4a4e69;
+  color: #ffffff;
+}
+
+/* 运算符键 */
+.key-op {
+  background-color: #e94560;
+  color: #ffffff;
+}
+
+/* 0键占两格 */
+.key-zero {
+  grid-column: span 2;
+  border-radius: 70rpx;
+  justify-content: flex-start;
+  padding-left: 60rpx;
+}
